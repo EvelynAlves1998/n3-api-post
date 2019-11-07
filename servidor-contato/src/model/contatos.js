@@ -1,4 +1,4 @@
-let model = {
+let agenda = {
   contatos: [
     {
       id: 1,
@@ -16,5 +16,5 @@ let model = {
 }
 
 module.exports = {
-  model
+  agenda
 }
