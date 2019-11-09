@@ -7,37 +7,51 @@ const getAll = (request, response) => {
 
 const add = (request, response) => {
   let contato = request.body
-  
+
   contato.id = Math.random().toString(36).substr(-8)
   console.log(contato)
-  
+
   model.agenda.contatos.push(contato)
   response.status(200).send()
 }
 
 // const nome = (request, response) => {
-  
-//   let contato = request.body.nome
-  
-//   if (contato.nome != contato.nome) {
-  
-//     let arrcontato = contato.split(arrcontato).filter((palavra, i) = 
-//     arrcontato.indexOf(palavra) === i);
+//   const contato = request.body
 
-//     model.agenda.contatos.push(contato)
+//   let conta = 0
+
+//     for (let i = 0; i < model.agenda.contatos.length; i++) {
+//       if (model.agenda.contatos[i].nome !== contato.nome) {
+//       conta = conta + 1
+//       }
+//     }
+//     if (conta > 0) {
+//       console.log("Esse nome ja existe")
+//       response.sendStatus(400)
+//     } else {
+//       console.log("Contato Adicionado")
+//       console.log(contado)
+
+//       if(typeof contato.id === 'ID' && contato.id > 0){
+//         model.agenda.contatos.push(contato)
+//         response.sendStatus(200)
+//       }else{
+//         console.log("ID Existente")
+//         response.sendStatus(400)
+//         } 
+//       } 
 //     response.status(200).send()
-    
-//   }else{ 
-    
-//     response.status(404).send("Nome Repetido")
-//   }
-//   console.log(contato)
-// }
+//     }
 
 
-module.exports = {
-  getAll,
-  add,
-  nome
-}
+    // const signo = (request, response) => {
+    // }
 
+
+
+    module.exports = {
+      getAll,
+      add,
+      nome
+      //signo
+    }

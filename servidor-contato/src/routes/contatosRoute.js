@@ -5,6 +5,7 @@ const controller = require("../controller/contatosController")
 
 router.get("/", controller.getAll)
 router.post("/criar", bodyParser.json(),controller.add)
+//router.get("/nome", bodyParser.json(),controller.nome)
 
 module.exports = router
 
