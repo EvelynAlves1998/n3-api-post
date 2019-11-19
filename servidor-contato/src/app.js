@@ -1,9 +1,12 @@
-const express = require("express")
-const app = express()
+const express = require("express");
+const app = express();
+const database = require('./model/database');
+database.connect();
+
 
 //rotas
-const index = require("./routes/index")
-const contatos = require("./routes/contatosRoute")
+const index = require("./routes/index");
+const contatos = require("./routes/contatosRoute");
 
 app.use(function (request, response, next) {
   response.header("Access-Control-Allow-Origin", "*")
@@ -14,7 +17,7 @@ app.use(function (request, response, next) {
   next()
 })
 
-app.use("/", index)
-app.use("/contatos", contatos)
+app.use("/", index);
+app.use("/contatos", contatos);
 
 module.exports = app
