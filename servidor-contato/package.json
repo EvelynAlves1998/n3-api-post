@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "patch-package",
     "nodemon": "nodemon server",
     "start": "node server",
+    "fazeralgolegal": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "5.7.11",
+    "patch-package": "^6.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
